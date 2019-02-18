@@ -20,6 +20,9 @@ class FrontViewController : UIViewController {
             // 버튼이 클릭될 때 메인 컨트롤러에 정의된 revealToggle(_:)을 호출하도록 정의한다.
             self.sideBarButton.target = revealVC
             self.sideBarButton.action = #selector(revealVC.revealToggle(_:))
+            
+            // 제스처를 뷰에 추가한다.
+            self.view.addGestureRecognizer(revealVC.panGestureRecognizer())
         }
         
     }
